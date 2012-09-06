@@ -5,7 +5,7 @@ import java.awt.Graphics;
 
 import brwyatt.brge.graphics.drawables.Drawable;
 
-public class MainMenuBackground implements Drawable {
+public class ExampleMenuBackground implements Drawable {
 	private int width=800;
 	private int height=600;
 

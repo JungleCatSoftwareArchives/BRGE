@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 import brwyatt.brge.BRGE;
 import brwyatt.brge.Game;
-import brwyatt.brge.examplegame.drawables.MainMenuBackground;
+import brwyatt.brge.examplegame.drawables.ExampleMenuBackground;
 import brwyatt.brge.graphics.ScreenObjects;
 import brwyatt.brge.graphics.drawables.MenuItem;
 import brwyatt.brge.levels.Level;
@@ -22,7 +22,7 @@ public class ExampleMenu extends Level{
 
 	public void startLevel() {
 		screenObjects.clear();
-		screenObjects.addToTop(new MainMenuBackground());
+		screenObjects.addToTop(new ExampleMenuBackground());
 
 		items=new ArrayList<MenuItem>();
 		items.add(new MenuItem(0, true, "Example Game"));
