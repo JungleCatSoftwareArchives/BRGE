@@ -11,13 +11,13 @@ public class BRGE { //Main class
 	private static Game theGame;
 	
 	public static void main(String args[]){
-		start(new TestGame(screenObjects)); //change this to whichever game you want!
+		start(new TestGame(new ScreenObjects())); //change this to whichever game you want!
 	}
 	
 	public static void start(Game game){
 		if(theGame==null){ //only start once
-			screenObjects=new ScreenObjects();
 			theGame=game;
+			screenObjects=game.getScreenObjects();
 			gw=new GameWindow(screenObjects);
 			(new Thread(gw)).start(); //Load GameWindow and start rendering
 			

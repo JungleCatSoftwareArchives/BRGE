@@ -11,7 +11,6 @@ public class TestGame extends Game {
 	private final String title="BRGE Test Game";
 	private Level currentLevel=null;
 	private ArrayList<Level> levels;
-	private ScreenObjects screenObjects;
 	
 	public TestGame(ScreenObjects so){
 		screenObjects=so;

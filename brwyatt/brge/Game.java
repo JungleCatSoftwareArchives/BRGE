@@ -23,4 +23,7 @@ public abstract class Game {
 	public abstract void keyReleased(int key);
 	public abstract void keyTyped(int key);
 	public abstract String getGameTitle();
+	public ScreenObjects getScreenObjects(){
+		return screenObjects;
+	}
 }
