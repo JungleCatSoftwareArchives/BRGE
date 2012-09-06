@@ -11,7 +11,7 @@ import brwyatt.brge.graphics.drawables.Enemy1;
 import brwyatt.brge.graphics.drawables.MenuItem;
 import brwyatt.brge.graphics.drawables.PauseMenuOverlayBackground;
 import brwyatt.brge.graphics.drawables.Player;
-import brwyatt.brge.graphics.drawables.SpaceTile1;
+import brwyatt.brge.graphics.drawables.SpaceTile;
 import brwyatt.brge.graphics.drawables.YellowLaser;
 import brwyatt.brge.graphics.drawables.GameOverText;
 
@@ -21,7 +21,7 @@ public class SimpleTestGame extends Level{
 	private boolean pause=false;
 	private Thread t;
 	
-	private ArrayList<SpaceTile1> bgtiles;
+	private ArrayList<SpaceTile> bgtiles;
 	private Player player;
 	private ArrayList<Drawable> playerWeapons;
 	private ArrayList<Drawable> enemies;
@@ -47,11 +47,11 @@ public class SimpleTestGame extends Level{
 		
 		screenObjects.addToBottom(new BlackBackground());
 		
-		bgtiles=new ArrayList<SpaceTile1>();
+		bgtiles=new ArrayList<SpaceTile>();
 		
 		for(int x=0;x<800;x+=50){
 			for(int y=-50;y<600;y+=50){
-				SpaceTile1 tmp=new SpaceTile1(x,y);
+				SpaceTile tmp=new SpaceTile(x,y);
 				bgtiles.add(tmp);
 				screenObjects.addToTop(tmp);
 			}

@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 
-public class SpaceTile1 implements Drawable{
+public class SpaceTile implements Drawable{
 	private int width=50;
 	private int height=50;
 
@@ -19,11 +19,11 @@ public class SpaceTile1 implements Drawable{
 	private ArrayList<Integer> starsY;
 	private ArrayList<Color> starsColor;
 	
-	public SpaceTile1(){
+	public SpaceTile(){
 		
 	}
 	
-	public SpaceTile1(int x, int y){
+	public SpaceTile(int x, int y){
 		this.x=x;
 		this.y=y;
 		
