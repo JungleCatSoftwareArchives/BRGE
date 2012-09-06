@@ -1,6 +1,5 @@
 package brwyatt.brge;
 
-import brwyatt.brge.examplegame.ExampleGame;
 import brwyatt.brge.graphics.GameWindow;
 import brwyatt.brge.graphics.ScreenObjects;
 
@@ -10,10 +9,6 @@ public class BRGE { //Main class
 	private static GameWindow gw;
 	private static ScreenObjects screenObjects;
 	private static Game theGame;
-	
-	public static void main(String args[]){
-		start(new ExampleGame(new ScreenObjects())); //change this to whichever game you want!
-	}
 	
 	public static void start(Game game){
 		if(theGame==null){ //only start once
