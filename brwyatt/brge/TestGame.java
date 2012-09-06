@@ -6,7 +6,6 @@ import brwyatt.brge.graphics.ScreenObjects;
 import brwyatt.brge.levels.Level;
 import brwyatt.brge.levels.MainMenu;
 import brwyatt.brge.levels.SimpleTestGame;
-import brwyatt.brge.levels.TestPatternLevel;
 
 public class TestGame extends Game {
 	private final String title="BRGE Test Game";
@@ -19,7 +18,6 @@ public class TestGame extends Game {
 		levels=new ArrayList<Level>();
 
 		levels.add(new MainMenu(this, screenObjects));
-		levels.add(new TestPatternLevel(this, screenObjects));
 		levels.add(new SimpleTestGame(this, screenObjects));
 	}
 	

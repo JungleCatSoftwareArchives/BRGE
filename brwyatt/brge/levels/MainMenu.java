@@ -13,6 +13,7 @@ public class MainMenu extends Level{
 	
 	private ArrayList<MenuItem> items;
 	private int selectedItem=0;
+	private boolean menuSelected=false; //Ensure that menu items can't be triggered if the spacebar was pressed prior to the menu loading
 	
 	public MainMenu(Game g, ScreenObjects so){
 		super(g, so);
@@ -23,12 +24,10 @@ public class MainMenu extends Level{
 		screenObjects.addToTop(new MainMenuBackground());
 
 		items=new ArrayList<MenuItem>();
-		items.add(new MenuItem(0, true, "Run Test Pattern"));
-		items.add(new MenuItem(1, "Simple Test Game"));
+		items.add(new MenuItem(0, true, "Test Game"));
 		items.add(new MenuItem(4, "Exit"));
 		screenObjects.addToTop(items.get(0));
 		screenObjects.addToTop(items.get(1));
-		screenObjects.addToTop(items.get(2));
 		
 		selectedItem=0;
 	}
@@ -58,9 +57,6 @@ public class MainMenu extends Level{
 				game.loadLevel(1);
 				break;
 			case 1:
-				game.loadLevel(2);
-				break;
-			case 2:
 				BRGE.exit();
 				break;
 		}
@@ -74,16 +70,21 @@ public class MainMenu extends Level{
 			case KeyEvent.VK_DOWN:
 				menuDown();
 				break;
+			case KeyEvent.VK_SPACE:
+			case KeyEvent.VK_ENTER:
+				menuSelected=true;
+				break;
 		}
 		
 	}
 	public void keyReleased(int key) {
 		switch(key){
 			case KeyEvent.VK_SPACE:
-				menuActivated();
-				break;
 			case KeyEvent.VK_ENTER:
-				menuActivated();
+				if(menuSelected){
+					menuSelected=false;
+					menuActivated();
+				}
 				break;
 		}
 	}
