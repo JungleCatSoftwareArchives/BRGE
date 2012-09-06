@@ -1,4 +1,4 @@
-package brwyatt.brge.graphics.drawables;
+package net.brwyatt.brge.graphics.drawables;
 
 import java.awt.Color;
 import java.awt.Graphics;

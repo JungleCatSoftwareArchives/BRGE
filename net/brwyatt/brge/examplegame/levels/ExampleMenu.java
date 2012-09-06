@@ -1,14 +1,15 @@
-package brwyatt.brge.examplegame.levels;
+package net.brwyatt.brge.examplegame.levels;
 
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 
-import brwyatt.brge.BRGE;
-import brwyatt.brge.Game;
-import brwyatt.brge.examplegame.drawables.ExampleMenuBackground;
-import brwyatt.brge.graphics.ScreenObjects;
-import brwyatt.brge.graphics.drawables.MenuItem;
-import brwyatt.brge.levels.Level;
+import net.brwyatt.brge.BRGE;
+import net.brwyatt.brge.Game;
+import net.brwyatt.brge.examplegame.drawables.ExampleMenuBackground;
+import net.brwyatt.brge.graphics.ScreenObjects;
+import net.brwyatt.brge.graphics.drawables.MenuItem;
+import net.brwyatt.brge.levels.Level;
+
 
 public class ExampleMenu extends Level{
 	

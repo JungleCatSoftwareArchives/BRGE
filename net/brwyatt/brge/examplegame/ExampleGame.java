@@ -1,12 +1,13 @@
-package brwyatt.brge.examplegame;
+package net.brwyatt.brge.examplegame;
 
 import java.util.ArrayList;
 
-import brwyatt.brge.Game;
-import brwyatt.brge.examplegame.levels.ExampleLevel;
-import brwyatt.brge.examplegame.levels.ExampleMenu;
-import brwyatt.brge.graphics.ScreenObjects;
-import brwyatt.brge.levels.Level;
+import net.brwyatt.brge.Game;
+import net.brwyatt.brge.examplegame.levels.ExampleLevel;
+import net.brwyatt.brge.examplegame.levels.ExampleMenu;
+import net.brwyatt.brge.graphics.ScreenObjects;
+import net.brwyatt.brge.levels.Level;
+
 
 public class ExampleGame extends Game {
 	private final String title="BRGE Example Game";

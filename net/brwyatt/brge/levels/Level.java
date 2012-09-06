@@ -1,7 +1,7 @@
-package brwyatt.brge.levels;
+package net.brwyatt.brge.levels;
 
-import brwyatt.brge.Game;
-import brwyatt.brge.graphics.ScreenObjects;
+import net.brwyatt.brge.Game;
+import net.brwyatt.brge.graphics.ScreenObjects;
 
 public abstract class Level{
 	protected ScreenObjects screenObjects;

@@ -1,9 +1,10 @@
-package brwyatt.brge.examplegame.drawables;
+package net.brwyatt.brge.examplegame.drawables;
 
 import java.awt.Color;
 import java.awt.Graphics;
 
-import brwyatt.brge.graphics.drawables.Drawable;
+import net.brwyatt.brge.graphics.drawables.Drawable;
+
 
 public class Player implements Drawable{
 	private int width=75;

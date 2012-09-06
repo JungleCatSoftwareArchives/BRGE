@@ -1,4 +1,4 @@
-package brwyatt.brge.graphics;
+package net.brwyatt.brge.graphics;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -13,7 +13,8 @@ import java.util.ArrayList;
 
 import javax.swing.JFrame;
 
-import brwyatt.brge.BRGE;
+import net.brwyatt.brge.BRGE;
+
 
 public class GameWindow extends JFrame implements WindowListener, Runnable, KeyListener {
 	private static final long serialVersionUID = -506949053075590082L;

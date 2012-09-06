@@ -1,6 +1,6 @@
-package brwyatt.brge;
+package net.brwyatt.brge;
 
-import brwyatt.brge.graphics.ScreenObjects;
+import net.brwyatt.brge.graphics.ScreenObjects;
 
 public abstract class Game {
 	protected ScreenObjects screenObjects;

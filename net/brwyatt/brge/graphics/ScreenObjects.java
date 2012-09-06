@@ -1,9 +1,10 @@
-package brwyatt.brge.graphics;
+package net.brwyatt.brge.graphics;
 
 import java.awt.Graphics;
 import java.util.ArrayList;
 
-import brwyatt.brge.graphics.drawables.Drawable;
+import net.brwyatt.brge.graphics.drawables.Drawable;
+
 
 public class ScreenObjects{
 	private ArrayList<Drawable> objects;
