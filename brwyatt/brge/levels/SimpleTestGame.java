@@ -13,6 +13,7 @@ import brwyatt.brge.graphics.drawables.PauseMenuOverlayBackground;
 import brwyatt.brge.graphics.drawables.Player;
 import brwyatt.brge.graphics.drawables.SpaceTile1;
 import brwyatt.brge.graphics.drawables.YellowLaser;
+import brwyatt.brge.graphics.drawables.GameOverText;
 
 public class SimpleTestGame extends Level{
 	
@@ -33,6 +34,9 @@ public class SimpleTestGame extends Level{
 	
 	private int enemyShift=0;
 	private boolean enemyShiftingRight=true;
+	
+	private boolean gameOver=false;
+	private GameOverText gameOverText;
 	
 	public SimpleTestGame(Game g, ScreenObjects so){
 		super(g, so);
@@ -176,6 +180,29 @@ public class SimpleTestGame extends Level{
 					player.setY(player.getY()-1);
 				}
 				fireOne=false;//kill any fire commands accidentally sent before ship is on screen
+			}else if(enemies.size()==0){//all enemies are dead, move the player up
+				if(!gameOver){
+					gameOver=true;
+
+					gameOverText=new GameOverText(0,0);
+					screenObjects.addToTop(gameOverText);
+				}
+				gameOverText.setX(400-(gameOverText.getWidth()/2));
+				gameOverText.setY(300-(gameOverText.getHeight()/2));
+				
+				if(player.getX()<362){
+					if(counter%20==0){//only move every 20ms
+						player.setX(player.getX()+1);
+					}
+				}else if(player.getX()>362){
+					if(counter%20==0){//only move every 20ms
+						player.setX(player.getX()-1);
+					}
+				}else{
+					if(counter%5==0){//only move every 5ms
+						player.setY(player.getY()-1);
+					}
+				}
 			}else{//player is in position, so allow movement and shooting
 				if(counter%5==0){//speed is 200px/second for left/right movement
 					if(moveright && !moveleft && player.getX()<(799-player.getWidth())){
@@ -265,6 +292,9 @@ public class SimpleTestGame extends Level{
 				}
 				
 				//if no enemies, end
+				if(player.getY()<-75){
+					(new Thread(){ public void run(){ game.loadLevel(0); }}).start();
+				}
 				
 			}
 			
