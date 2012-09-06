@@ -1,8 +1,10 @@
-package brwyatt.brge.graphics.drawables;
+package brwyatt.brge.testgame.drawables;
 
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
+
+import brwyatt.brge.graphics.drawables.Drawable;
 
 public class PauseMenuOverlayBackground implements Drawable {
 	private int width=400;

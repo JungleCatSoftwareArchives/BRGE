@@ -1,4 +1,4 @@
-package brwyatt.brge.levels;
+package brwyatt.brge.testgame.levels;
 
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
@@ -6,16 +6,17 @@ import java.util.ArrayList;
 import brwyatt.brge.BRGE;
 import brwyatt.brge.Game;
 import brwyatt.brge.graphics.ScreenObjects;
-import brwyatt.brge.graphics.drawables.MainMenuBackground;
 import brwyatt.brge.graphics.drawables.MenuItem;
+import brwyatt.brge.levels.Level;
+import brwyatt.brge.testgame.drawables.MainMenuBackground;
 
-public class MainMenu extends Level{
+public class TestMenu extends Level{
 	
 	private ArrayList<MenuItem> items;
 	private int selectedItem=0;
 	private boolean menuSelected=false; //Ensure that menu items can't be triggered if the spacebar was pressed prior to the menu loading
 	
-	public MainMenu(Game g, ScreenObjects so){
+	public TestMenu(Game g, ScreenObjects so){
 		super(g, so);
 	}
 

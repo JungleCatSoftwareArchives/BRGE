@@ -1,9 +1,11 @@
-package brwyatt.brge.graphics.drawables;
+package brwyatt.brge.testgame.drawables;
 
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.FontMetrics;
 import java.awt.Graphics;
+
+import brwyatt.brge.graphics.drawables.Drawable;
 
 public class GameOverText implements Drawable{
 	private int width=0;

@@ -1,11 +1,12 @@
-package brwyatt.brge;
+package brwyatt.brge.testgame;
 
 import java.util.ArrayList;
 
+import brwyatt.brge.Game;
 import brwyatt.brge.graphics.ScreenObjects;
 import brwyatt.brge.levels.Level;
-import brwyatt.brge.levels.MainMenu;
-import brwyatt.brge.levels.SimpleTestGame;
+import brwyatt.brge.testgame.levels.TestMenu;
+import brwyatt.brge.testgame.levels.TestLevel;
 
 public class TestGame extends Game {
 	private final String title="BRGE Test Game";
@@ -16,8 +17,8 @@ public class TestGame extends Game {
 		screenObjects=so;
 		levels=new ArrayList<Level>();
 
-		levels.add(new MainMenu(this, screenObjects));
-		levels.add(new SimpleTestGame(this, screenObjects));
+		levels.add(new TestMenu(this, screenObjects));
+		levels.add(new TestLevel(this, screenObjects));
 	}
 	
 	public void startGame() {

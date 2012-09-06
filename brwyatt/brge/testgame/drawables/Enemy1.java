@@ -1,7 +1,9 @@
-package brwyatt.brge.graphics.drawables;
+package brwyatt.brge.testgame.drawables;
 
 import java.awt.Color;
 import java.awt.Graphics;
+
+import brwyatt.brge.graphics.drawables.Drawable;
 
 public class Enemy1 implements Drawable{
 	private int width=10;

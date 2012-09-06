@@ -2,6 +2,7 @@ package brwyatt.brge;
 
 import brwyatt.brge.graphics.GameWindow;
 import brwyatt.brge.graphics.ScreenObjects;
+import brwyatt.brge.testgame.TestGame;
 
 public class BRGE { //Main class
 	private static int width=800;

@@ -1,9 +1,11 @@
-package brwyatt.brge.graphics.drawables;
+package brwyatt.brge.testgame.drawables;
 
 import java.awt.Color;
 import java.awt.Graphics;
 import java.util.ArrayList;
 import java.util.Random;
+
+import brwyatt.brge.graphics.drawables.Drawable;
 
 
 public class SpaceTile implements Drawable{
