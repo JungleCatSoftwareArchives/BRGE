@@ -9,7 +9,7 @@ import brwyatt.brge.graphics.ScreenObjects;
 import brwyatt.brge.levels.Level;
 
 public class ExampleGame extends Game {
-	private final String title="BRGE Test Game";
+	private final String title="BRGE Example Game";
 	private Level currentLevel=null;
 	private ArrayList<Level> levels;
 	
