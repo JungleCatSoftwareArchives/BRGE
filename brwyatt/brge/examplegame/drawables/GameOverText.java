@@ -1,4 +1,4 @@
-package brwyatt.brge.testgame.drawables;
+package brwyatt.brge.examplegame.drawables;
 
 import java.awt.Color;
 import java.awt.Font;

@@ -1,24 +1,24 @@
-package brwyatt.brge.testgame;
+package brwyatt.brge.examplegame;
 
 import java.util.ArrayList;
 
 import brwyatt.brge.Game;
+import brwyatt.brge.examplegame.levels.ExampleLevel;
+import brwyatt.brge.examplegame.levels.ExampleMenu;
 import brwyatt.brge.graphics.ScreenObjects;
 import brwyatt.brge.levels.Level;
-import brwyatt.brge.testgame.levels.TestMenu;
-import brwyatt.brge.testgame.levels.TestLevel;
 
-public class TestGame extends Game {
+public class ExampleGame extends Game {
 	private final String title="BRGE Test Game";
 	private Level currentLevel=null;
 	private ArrayList<Level> levels;
 	
-	public TestGame(ScreenObjects so){
+	public ExampleGame(ScreenObjects so){
 		screenObjects=so;
 		levels=new ArrayList<Level>();
 
-		levels.add(new TestMenu(this, screenObjects));
-		levels.add(new TestLevel(this, screenObjects));
+		levels.add(new ExampleMenu(this, screenObjects));
+		levels.add(new ExampleLevel(this, screenObjects));
 	}
 	
 	public void startGame() {

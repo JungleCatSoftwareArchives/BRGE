@@ -1,8 +1,8 @@
 package brwyatt.brge;
 
+import brwyatt.brge.examplegame.ExampleGame;
 import brwyatt.brge.graphics.GameWindow;
 import brwyatt.brge.graphics.ScreenObjects;
-import brwyatt.brge.testgame.TestGame;
 
 public class BRGE { //Main class
 	private static int width=800;
@@ -12,7 +12,7 @@ public class BRGE { //Main class
 	private static Game theGame;
 	
 	public static void main(String args[]){
-		start(new TestGame(new ScreenObjects())); //change this to whichever game you want!
+		start(new ExampleGame(new ScreenObjects())); //change this to whichever game you want!
 	}
 	
 	public static void start(Game game){

@@ -1,22 +1,22 @@
-package brwyatt.brge.testgame.levels;
+package brwyatt.brge.examplegame.levels;
 
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 
 import brwyatt.brge.Game;
+import brwyatt.brge.examplegame.drawables.Enemy1;
+import brwyatt.brge.examplegame.drawables.GameOverText;
+import brwyatt.brge.examplegame.drawables.PauseMenuOverlayBackground;
+import brwyatt.brge.examplegame.drawables.Player;
+import brwyatt.brge.examplegame.drawables.SpaceTile;
+import brwyatt.brge.examplegame.drawables.YellowLaser;
 import brwyatt.brge.graphics.ScreenObjects;
 import brwyatt.brge.graphics.drawables.BlackBackground;
 import brwyatt.brge.graphics.drawables.Drawable;
 import brwyatt.brge.graphics.drawables.MenuItem;
 import brwyatt.brge.levels.Level;
-import brwyatt.brge.testgame.drawables.Enemy1;
-import brwyatt.brge.testgame.drawables.GameOverText;
-import brwyatt.brge.testgame.drawables.PauseMenuOverlayBackground;
-import brwyatt.brge.testgame.drawables.Player;
-import brwyatt.brge.testgame.drawables.SpaceTile;
-import brwyatt.brge.testgame.drawables.YellowLaser;
 
-public class TestLevel extends Level{
+public class ExampleLevel extends Level{
 	
 	private boolean run=true;
 	private boolean pause=false;
@@ -39,7 +39,7 @@ public class TestLevel extends Level{
 	private boolean gameOver=false;
 	private GameOverText gameOverText;
 	
-	public TestLevel(Game g, ScreenObjects so){
+	public ExampleLevel(Game g, ScreenObjects so){
 		super(g, so);
 	}
 
