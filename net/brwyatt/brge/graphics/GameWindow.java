@@ -84,20 +84,20 @@ public class GameWindow extends JFrame implements WindowListener, Runnable, KeyL
 			g.setColor(Color.lightGray);
 			g.drawRect(0, 0, getWidth()-1, getHeight()-1);
 			
-			if(drawFPS){
-				long thisFrame=System.currentTimeMillis(); //get the current time
-				long r=(thisFrame-lastFrame);
-				if(r<=0){
-					r=1;
-				}
-				FPS=(int)(1000/r); //calculate FPS
-				
+			//calculate and lock framerates
+			long thisFrame=System.currentTimeMillis(); //get the current time
+			long r=(thisFrame-lastFrame);
+			if(r<=0){
+				r=1;
+			}
+			FPS=(int)(1000/r); //calculate FPS
+			if(drawFPS){	
 				g.setColor(Color.red);
 				g.drawString("FPS:   "+FPS, 5, 12);
 				g.drawString("Delay: "+sleeptime, 5, 24);
-				
-				lastFrame=thisFrame; // set last frame time to this frame's time for the next time it is called
 			}
+			lastFrame=thisFrame; // set last frame time to this frame's time for the next time it is called
+			
 		}catch(Exception e){
 			e.printStackTrace();
 		}finally{
