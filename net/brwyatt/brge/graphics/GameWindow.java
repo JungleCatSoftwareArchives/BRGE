@@ -18,7 +18,7 @@ import net.brwyatt.brge.BRGE;
 
 public class GameWindow extends JFrame implements WindowListener, Runnable, KeyListener {
 	private static final long serialVersionUID = -506949053075590082L;
-	private boolean drawFPS=true;
+	private boolean drawFPS=false;
 	private long lastFrame=0;
 	private int FPS=0;
 	private int sleeptime=10;
@@ -26,11 +26,20 @@ public class GameWindow extends JFrame implements WindowListener, Runnable, KeyL
 
 	private ArrayList<Integer> fpsHist;
 	private ArrayList<Integer> sleepHist;
-	
-	@SuppressWarnings("static-access")
+
 	public GameWindow(ScreenObjects so){
 		super(BRGE.getGameTitle());
 		
+		init(so,false);
+	}
+	public GameWindow(ScreenObjects so, boolean drawFPS){
+		super(BRGE.getGameTitle());
+		
+		init(so,drawFPS);
+	}
+	
+	@SuppressWarnings("static-access")
+	private void init(ScreenObjects so, boolean drawFPS){
 		screenObjects=so;
 		
 		addWindowListener(this);
@@ -75,20 +84,20 @@ public class GameWindow extends JFrame implements WindowListener, Runnable, KeyL
 			g.setColor(Color.lightGray);
 			g.drawRect(0, 0, getWidth()-1, getHeight()-1);
 			
-			if(drawFPS){
-				long thisFrame=System.currentTimeMillis(); //get the current time
-				long r=(thisFrame-lastFrame);
-				if(r<=0){
-					r=1;
-				}
-				FPS=(int)(1000/r); //calculate FPS
-				
+			//calculate and lock framerates
+			long thisFrame=System.currentTimeMillis(); //get the current time
+			long r=(thisFrame-lastFrame);
+			if(r<=0){
+				r=1;
+			}
+			FPS=(int)(1000/r); //calculate FPS
+			if(drawFPS){	
 				g.setColor(Color.red);
 				g.drawString("FPS:   "+FPS, 5, 12);
 				g.drawString("Delay: "+sleeptime, 5, 24);
-				
-				lastFrame=thisFrame; // set last frame time to this frame's time for the next time it is called
 			}
+			lastFrame=thisFrame; // set last frame time to this frame's time for the next time it is called
+			
 		}catch(Exception e){
 			e.printStackTrace();
 		}finally{
@@ -129,6 +138,10 @@ public class GameWindow extends JFrame implements WindowListener, Runnable, KeyL
 			} catch (InterruptedException e) {
 			}
 		}
+	}
+	
+	public void toggleFPS(){
+		drawFPS=!drawFPS;
 	}
 	
 	//WindowListener Methods

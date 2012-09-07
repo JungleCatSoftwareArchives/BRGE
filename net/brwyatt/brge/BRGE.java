@@ -30,6 +30,9 @@ public class BRGE { //Main class
 	public static int getHeight(){
 		return height;
 	}
+	public static void toggleFPS(){
+		gw.toggleFPS();
+	}
 	public static void keyPressed(int key){
 		theGame.keyPressed(key);
 	}
