@@ -18,7 +18,7 @@ import net.brwyatt.brge.BRGE;
 
 public class GameWindow extends JFrame implements WindowListener, Runnable, KeyListener {
 	private static final long serialVersionUID = -506949053075590082L;
-	private boolean drawFPS=true;
+	private boolean drawFPS=false;
 	private long lastFrame=0;
 	private int FPS=0;
 	private int sleeptime=10;
@@ -26,11 +26,20 @@ public class GameWindow extends JFrame implements WindowListener, Runnable, KeyL
 
 	private ArrayList<Integer> fpsHist;
 	private ArrayList<Integer> sleepHist;
-	
-	@SuppressWarnings("static-access")
+
 	public GameWindow(ScreenObjects so){
 		super(BRGE.getGameTitle());
 		
+		init(so,false);
+	}
+	public GameWindow(ScreenObjects so, boolean drawFPS){
+		super(BRGE.getGameTitle());
+		
+		init(so,drawFPS);
+	}
+	
+	@SuppressWarnings("static-access")
+	private void init(ScreenObjects so, boolean drawFPS){
 		screenObjects=so;
 		
 		addWindowListener(this);
@@ -129,6 +138,10 @@ public class GameWindow extends JFrame implements WindowListener, Runnable, KeyL
 			} catch (InterruptedException e) {
 			}
 		}
+	}
+	
+	public void toggleFPS(){
+		drawFPS=!drawFPS;
 	}
 	
 	//WindowListener Methods
