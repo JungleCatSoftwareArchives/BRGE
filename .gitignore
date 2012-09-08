@@ -1,3 +1,6 @@
+#Ignore binary libraries
+lib/
+
 #################
 ## Eclipse
 #################
