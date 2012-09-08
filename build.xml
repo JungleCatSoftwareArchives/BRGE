@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="BRGE" default="compile" basedir=".">
+    <description>
+        Build and Package BRGE
+    </description>
+	
+  <!-- set global properties for this build -->
+  <property name="src" location="src"/>
+  <property name="build" location="build"/>
+  <property name="artifacts"  location="artifacts"/>
+  
+  <target name="init" depends="clean">
+    <!-- Create the time stamp -->
+    <tstamp/>
+    <!-- Create the build directory structure used by compile -->
+    <mkdir dir="${build}"/>
+  </target>
+
+  <target name="compile" depends="init" description="compile the source " >
+    <!-- Compile the java code from ${src} into ${build} -->
+    <javac srcdir="${src}" destdir="${build}"/>
+  </target>
+
+  <target name="package" depends="compile" description="generate the jarfiles" >
+    <!-- Create the distribution directory -->
+    <mkdir dir="${artifacts}"/>
+
+    <!-- Put everything in ${build} into the BRGE-${DSTAMP}.jar file -->
+    <jar jarfile="${artifacts}/BRGE-${DSTAMP}.jar" basedir="${build}"/>
+
+    <!-- Put everything in ${build} into the BRGE-${DSTAMP}-ExampleGame.jar file -->
+    <jar jarfile="${artifacts}/BRGE-${DSTAMP}-ExampleGame.jar" basedir="${build}">
+        <manifest>
+          <attribute name="Main-Class" value="net.brwyatt.brge.examplegame.Main"/>
+        </manifest>
+    </jar>
+  </target>
+
+  <target name="clean" description="clean up" >
+    <!-- Delete the ${build} and ${dist} directory trees -->
+    <delete dir="${build}"/>
+    <delete dir="${artifacts}"/>
+  </target>
+</project>
