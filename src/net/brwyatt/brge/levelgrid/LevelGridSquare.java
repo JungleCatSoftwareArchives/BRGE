@@ -4,6 +4,7 @@ import java.awt.Polygon;
 import java.util.ArrayList;
 
 import net.brwyatt.brge.graphics.drawables.Drawable;
+import net.brwyatt.brge.graphics.drawables.LevelGridDrawable;
 
 public class LevelGridSquare implements Comparable<LevelGridSquare>{
 	private LevelGridPoint topLeft;
@@ -16,14 +17,14 @@ public class LevelGridSquare implements Comparable<LevelGridSquare>{
 	private LevelGridSquare left;
 	private LevelGridSquare right;
 	
-	private ArrayList<Drawable> objects;
+	private ArrayList<LevelGridDrawable> objects;
 	
 	public LevelGridSquare(LevelGridPoint topLeft,LevelGridPoint topRight,LevelGridPoint bottomLeft,LevelGridPoint bottomRight){
 		this.setTopLeft(topLeft);
 		this.setTopRight(topRight);
 		this.setBottomLeft(bottomLeft);
 		this.setBottomRight(bottomRight);
-		objects=new ArrayList<Drawable>();
+		objects=new ArrayList<LevelGridDrawable>();
 	}
 
 	public LevelGridPoint getTopLeft() {
@@ -98,7 +99,7 @@ public class LevelGridSquare implements Comparable<LevelGridSquare>{
 		this.right = right;
 	}
 	
-	public ArrayList<Drawable> getObjects(){
+	public ArrayList<LevelGridDrawable> getObjects(){
 		return objects;
 	}
 
