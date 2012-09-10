@@ -37,4 +37,7 @@ public class LevelGridPoint {
 	public void setY(double y) {
 		this.y = y;
 	}
+	public LevelGridPoint copy(){
+		return new LevelGridPoint(this.x,this.y);
+	}
 }

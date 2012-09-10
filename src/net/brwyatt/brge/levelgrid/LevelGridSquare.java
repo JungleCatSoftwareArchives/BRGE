@@ -101,8 +101,9 @@ public class LevelGridSquare implements Comparable<LevelGridSquare>{
 	public ArrayList<LevelGridDrawable> getObjects(){
 		return objects;
 	}
-
-	@Override
+	public LevelGridSquare copy(){
+		return new LevelGridSquare(this.topLeft.copy(),this.topRight.copy(),this.bottomLeft.copy(),this.bottomRight.copy());
+	}
 	public int compareTo(LevelGridSquare other) {
 		int diff=0;
 		diff+=this.topLeft.getX()-other.topLeft.getX();
