@@ -3,7 +3,6 @@ package net.brwyatt.brge.levelgrid;
 import java.awt.Polygon;
 import java.util.ArrayList;
 
-import net.brwyatt.brge.graphics.drawables.Drawable;
 import net.brwyatt.brge.graphics.drawables.LevelGridDrawable;
 
 public class LevelGridSquare implements Comparable<LevelGridSquare>{
