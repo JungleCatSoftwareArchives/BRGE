@@ -116,4 +116,7 @@ public class LevelGridSquare implements Comparable<LevelGridSquare>{
 		diff+=this.bottomRight.getY()-other.bottomRight.getY();
 		return diff;
 	}
+	public String toString(){
+		return "("+this.topLeft+","+this.topRight+","+this.bottomLeft+","+this.bottomRight+")";
+	}
 }

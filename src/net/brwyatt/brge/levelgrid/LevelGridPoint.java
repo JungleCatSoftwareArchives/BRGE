@@ -40,4 +40,7 @@ public class LevelGridPoint {
 	public LevelGridPoint copy(){
 		return new LevelGridPoint(this.x,this.y);
 	}
+	public String toString(){
+		return "("+this.getX()+","+this.getY()+")";
+	}
 }
