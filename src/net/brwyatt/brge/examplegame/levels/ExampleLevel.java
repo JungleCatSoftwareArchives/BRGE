@@ -16,8 +16,8 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with BRGE.  If not, see <http://www.gnu.org/licenses/>.
  */
- 
- package net.brwyatt.brge.examplegame.levels;
+
+package net.brwyatt.brge.examplegame.levels;
 
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;

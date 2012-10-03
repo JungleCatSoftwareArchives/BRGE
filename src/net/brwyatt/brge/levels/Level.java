@@ -16,8 +16,8 @@
  * You should have received a copy of the GNU Lesser General Public License
  * along with BRGE.  If not, see <http://www.gnu.org/licenses/>.
  */
- 
- package net.brwyatt.brge.levels;
+
+package net.brwyatt.brge.levels;
 
 import net.brwyatt.brge.Game;
 import net.brwyatt.brge.graphics.ScreenObjects;
