@@ -1,4 +1,4 @@
-BR's Game Engine
+BR's Game Engine [![Build Status](https://jenkins.brwyatt.net/job/BRGE/badge/icon)](https://jenkins.brwyatt.net/job/BRGE/)
 ================
 
 This is a simple sprite-based game engine written in Java. It aims to be simple to use, but still allowing the programmer as much control as they desire.
