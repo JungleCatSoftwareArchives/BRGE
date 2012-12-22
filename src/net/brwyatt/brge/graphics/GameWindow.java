@@ -60,6 +60,7 @@ public class GameWindow extends JFrame implements WindowListener, Runnable, KeyL
 	@SuppressWarnings("static-access")
 	private void init(ScreenObjects so, boolean drawFPS){
 		screenObjects=so;
+		this.drawFPS=drawFPS;
 		
 		addWindowListener(this);
 		addKeyListener(this);
@@ -112,8 +113,8 @@ public class GameWindow extends JFrame implements WindowListener, Runnable, KeyL
 			FPS=(int)(1000/r); //calculate FPS
 			if(drawFPS){	
 				g.setColor(Color.red);
-				g.drawString("FPS:   "+FPS, 5, 12);
-				g.drawString("Delay: "+sleeptime, 5, 24);
+				g.drawString("FPS:   "+FPS, 5, BRGE.getHeight()-20);
+				g.drawString("Delay: "+sleeptime, 5, BRGE.getHeight()-8);
 			}
 			lastFrame=thisFrame; // set last frame time to this frame's time for the next time it is called
 			
