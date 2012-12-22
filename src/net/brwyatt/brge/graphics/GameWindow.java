@@ -64,7 +64,7 @@ public class GameWindow extends JFrame implements WindowListener, Runnable, KeyL
 		addWindowListener(this);
 		addKeyListener(this);
 		setResizable(false);
-		setUndecorated(true);
+		//setUndecorated(true);
 		setSize(BRGE.getWidth(),BRGE.getHeight());
 		
 		fpsHist=new ArrayList<Integer>();
