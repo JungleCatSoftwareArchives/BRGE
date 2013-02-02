@@ -42,6 +42,11 @@ public class ScreenObjects{
 			objects.add(d);
 		}
 	}
+	public void addAtIndex(int i, Drawable d){
+		synchronized(objects){
+			objects.add(i,d);
+		}
+	}
 	public boolean remove(Drawable d){
 		return objects.remove(d);
 	}
@@ -54,5 +59,8 @@ public class ScreenObjects{
 				objects.get(i).draw(g);
 			}
 		}
+	}
+	public int count(){
+		return objects.size();
 	}
 }
