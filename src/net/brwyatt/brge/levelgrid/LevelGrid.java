@@ -32,6 +32,9 @@ public class LevelGrid {
 	public LevelGrid(int viewWidth,int viewHeight){
 		this.viewWidth=viewWidth;
 		this.viewHeight=viewHeight;
+		resetGrid();
+	}
+	public void resetGrid(){
 		gridSquares=new ArrayList<ArrayList<LevelGridSquare>>();
 		calculateGrid();
 	}
