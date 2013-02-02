@@ -60,6 +60,11 @@ public class ScreenObjects{
 			}
 		}
 	}
+	public int lastIndexOf(Drawable d){
+		synchronized(objects){
+			return objects.lastIndexOf(d);
+		}
+	}
 	public int count(){
 		return objects.size();
 	}
