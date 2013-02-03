@@ -17,10 +17,10 @@
  * along with BRGE.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package net.brwyatt.brge.levels;
+package com.junglecatsoftware.brge.levels;
 
-import net.brwyatt.brge.Game;
-import net.brwyatt.brge.graphics.ScreenObjects;
+import com.junglecatsoftware.brge.Game;
+import com.junglecatsoftware.brge.graphics.ScreenObjects;
 
 public abstract class Level{
 	protected ScreenObjects screenObjects;

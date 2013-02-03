@@ -17,11 +17,11 @@
  * along with BRGE.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package net.brwyatt.brge.examplegame;
+package com.junglecatsoftware.brge.examplegame;
 
-import net.brwyatt.brge.BRGE;
-import net.brwyatt.brge.examplegame.ExampleGame;
-import net.brwyatt.brge.graphics.ScreenObjects;
+import com.junglecatsoftware.brge.BRGE;
+import com.junglecatsoftware.brge.examplegame.ExampleGame;
+import com.junglecatsoftware.brge.graphics.ScreenObjects;
 
 public class Main {
 

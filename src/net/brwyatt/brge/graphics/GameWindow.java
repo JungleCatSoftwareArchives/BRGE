@@ -17,7 +17,7 @@
  * along with BRGE.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package net.brwyatt.brge.graphics;
+package com.junglecatsoftware.brge.graphics;
 
 import java.awt.Color;
 import java.awt.Dimension;
@@ -32,7 +32,8 @@ import java.util.ArrayList;
 
 import javax.swing.JFrame;
 
-import net.brwyatt.brge.BRGE;
+import com.junglecatsoftware.brge.BRGE;
+
 
 
 public class GameWindow extends JFrame implements WindowListener, Runnable, KeyListener {

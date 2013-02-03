@@ -17,9 +17,9 @@
  * along with BRGE.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package net.brwyatt.brge;
+package com.junglecatsoftware.brge;
 
-import net.brwyatt.brge.graphics.ScreenObjects;
+import com.junglecatsoftware.brge.graphics.ScreenObjects;
 
 public abstract class Game {
 	protected ScreenObjects screenObjects;
