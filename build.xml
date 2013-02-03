@@ -25,23 +25,23 @@
 	
 	<target name="package-BRGE" description="generate the jarfiles" >
 		<!-- Put all engine files in ${build} into the BRGE-${buildId}.jar file (Don't package example game) -->
-		<jar jarfile="${artifacts}/BRGE-${buildId}.jar" basedir="${build}" excludes="net/brwyatt/brge/examplegame/**" />
+		<jar jarfile="${artifacts}/BRGE-${buildId}.jar" basedir="${build}" excludes="com/junglecatsoftware/brge/examplegame/**" />
 	</target>
 	
 	<target name="package-ExampleGame-BRGE" description="generate the jarfiles" >
 		<!-- Put everything in ${build} into the ExampleGame-BRGE-${buildId}.jar file (and make it run the Example game) -->
 		<jar jarfile="${artifacts}/ExampleGame-BRGE-${buildId}.jar" basedir="${build}">
 			<manifest>
-				<attribute name="Main-Class" value="net.brwyatt.brge.examplegame.Main"/>
+				<attribute name="Main-Class" value="com.junglecatsoftware.brge.examplegame.Main"/>
 			</manifest>
 		</jar>
 	</target>
 	
 	<target name="package-ExampleGame" description="generate the jarfiles" >
 		<!-- Put only the ExampleGame in ${build} into the ExampleGame-${buildId}.jar file (and make it run the Example game) -->
-		<jar jarfile="${artifacts}/ExampleGame-${buildId}.jar" basedir="${build}" includes="net/brwyatt/brge/examplegame/**">
+		<jar jarfile="${artifacts}/ExampleGame-${buildId}.jar" basedir="${build}" includes="com/junglecatsoftware/brge/examplegame/**">
 			<manifest>
-				<attribute name="Main-Class" value="net.brwyatt.brge.examplegame.Main"/>
+				<attribute name="Main-Class" value="com.junglecatsoftware.brge.examplegame.Main"/>
 			</manifest>
 		</jar>
 	</target>
