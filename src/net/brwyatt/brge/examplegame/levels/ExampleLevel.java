@@ -17,23 +17,24 @@
  * along with BRGE.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package net.brwyatt.brge.examplegame.levels;
+package com.junglecatsoftware.brge.examplegame.levels;
 
 import java.awt.event.KeyEvent;
 import java.util.ArrayList;
 
-import net.brwyatt.brge.Game;
-import net.brwyatt.brge.examplegame.drawables.Enemy1;
-import net.brwyatt.brge.examplegame.drawables.GameOverText;
-import net.brwyatt.brge.examplegame.drawables.PauseMenuOverlayBackground;
-import net.brwyatt.brge.examplegame.drawables.Player;
-import net.brwyatt.brge.examplegame.drawables.SpaceTile;
-import net.brwyatt.brge.examplegame.drawables.YellowLaser;
-import net.brwyatt.brge.graphics.ScreenObjects;
-import net.brwyatt.brge.graphics.drawables.BlackBackground;
-import net.brwyatt.brge.graphics.drawables.Drawable;
-import net.brwyatt.brge.graphics.drawables.MenuItem;
-import net.brwyatt.brge.levels.Level;
+import com.junglecatsoftware.brge.Game;
+import com.junglecatsoftware.brge.examplegame.drawables.Enemy1;
+import com.junglecatsoftware.brge.examplegame.drawables.GameOverText;
+import com.junglecatsoftware.brge.examplegame.drawables.PauseMenuOverlayBackground;
+import com.junglecatsoftware.brge.examplegame.drawables.Player;
+import com.junglecatsoftware.brge.examplegame.drawables.SpaceTile;
+import com.junglecatsoftware.brge.examplegame.drawables.YellowLaser;
+import com.junglecatsoftware.brge.graphics.ScreenObjects;
+import com.junglecatsoftware.brge.graphics.drawables.BlackBackground;
+import com.junglecatsoftware.brge.graphics.drawables.Drawable;
+import com.junglecatsoftware.brge.graphics.drawables.MenuItem;
+import com.junglecatsoftware.brge.levels.Level;
+
 
 
 public class ExampleLevel extends Level{

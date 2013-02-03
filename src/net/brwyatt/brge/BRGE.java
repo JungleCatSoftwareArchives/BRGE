@@ -17,10 +17,10 @@
  * along with BRGE.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package net.brwyatt.brge;
+package com.junglecatsoftware.brge;
 
-import net.brwyatt.brge.graphics.GameWindow;
-import net.brwyatt.brge.graphics.ScreenObjects;
+import com.junglecatsoftware.brge.graphics.GameWindow;
+import com.junglecatsoftware.brge.graphics.ScreenObjects;
 
 public class BRGE { //Main class
 	private static int width=800;

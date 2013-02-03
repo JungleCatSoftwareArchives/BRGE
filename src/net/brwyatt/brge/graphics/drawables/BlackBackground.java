@@ -17,7 +17,7 @@
  * along with BRGE.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package net.brwyatt.brge.graphics.drawables;
+package com.junglecatsoftware.brge.graphics.drawables;
 
 import java.awt.Color;
 import java.awt.Graphics;

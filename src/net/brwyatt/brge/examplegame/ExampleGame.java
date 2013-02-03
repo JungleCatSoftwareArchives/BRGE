@@ -17,15 +17,16 @@
  * along with BRGE.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package net.brwyatt.brge.examplegame;
+package com.junglecatsoftware.brge.examplegame;
 
 import java.util.ArrayList;
 
-import net.brwyatt.brge.Game;
-import net.brwyatt.brge.examplegame.levels.ExampleLevel;
-import net.brwyatt.brge.examplegame.levels.ExampleMenu;
-import net.brwyatt.brge.graphics.ScreenObjects;
-import net.brwyatt.brge.levels.Level;
+import com.junglecatsoftware.brge.Game;
+import com.junglecatsoftware.brge.examplegame.levels.ExampleLevel;
+import com.junglecatsoftware.brge.examplegame.levels.ExampleMenu;
+import com.junglecatsoftware.brge.graphics.ScreenObjects;
+import com.junglecatsoftware.brge.levels.Level;
+
 
 
 public class ExampleGame extends Game {

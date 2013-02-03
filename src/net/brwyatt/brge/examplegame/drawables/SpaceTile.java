@@ -17,14 +17,15 @@
  * along with BRGE.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package net.brwyatt.brge.examplegame.drawables;
+package com.junglecatsoftware.brge.examplegame.drawables;
 
 import java.awt.Color;
 import java.awt.Graphics;
 import java.util.ArrayList;
 import java.util.Random;
 
-import net.brwyatt.brge.graphics.drawables.Drawable;
+import com.junglecatsoftware.brge.graphics.drawables.Drawable;
+
 
 
 

@@ -17,12 +17,13 @@
  * along with BRGE.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package net.brwyatt.brge.levelgrid;
+package com.junglecatsoftware.brge.levelgrid;
 
 import java.awt.Polygon;
 import java.util.ArrayList;
 
-import net.brwyatt.brge.graphics.drawables.LevelGridDrawable;
+import com.junglecatsoftware.brge.graphics.drawables.LevelGridDrawable;
+
 
 public class LevelGridSquare implements Comparable<LevelGridSquare>{
 	private LevelGridPoint topLeft;

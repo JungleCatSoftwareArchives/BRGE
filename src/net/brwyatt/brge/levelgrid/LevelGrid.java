@@ -17,7 +17,7 @@
  * along with BRGE.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package net.brwyatt.brge.levelgrid;
+package com.junglecatsoftware.brge.levelgrid;
 
 import java.util.ArrayList;
 

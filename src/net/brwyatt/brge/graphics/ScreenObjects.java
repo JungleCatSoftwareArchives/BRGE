@@ -17,12 +17,13 @@
  * along with BRGE.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package net.brwyatt.brge.graphics;
+package com.junglecatsoftware.brge.graphics;
 
 import java.awt.Graphics;
 import java.util.ArrayList;
 
-import net.brwyatt.brge.graphics.drawables.Drawable;
+import com.junglecatsoftware.brge.graphics.drawables.Drawable;
+
 
 
 public class ScreenObjects{
