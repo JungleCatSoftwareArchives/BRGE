@@ -11,4 +11,4 @@ Copy the example game and modify/add to it as needed and import BRGE (either as 
 Running the Example Game
 ------------------------
 
-To run the example game, run the compiled JAR, or compile and run brwyatt/brge/examplegame/Main.class
+To run the example game, run the compiled JAR, or compile and run com/junglecatsoftware/brge/examplegame/Main.class
