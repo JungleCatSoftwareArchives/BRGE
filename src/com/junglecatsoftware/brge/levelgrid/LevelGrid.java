@@ -19,19 +19,24 @@
 
 package com.junglecatsoftware.brge.levelgrid;
 
+import java.awt.Graphics;
 import java.util.ArrayList;
 
-public class LevelGrid {
+import com.junglecatsoftware.brge.graphics.drawables.Drawable;
+
+public class LevelGrid implements Drawable{
 	private final int vanishingY=-1000;//Constant as changing this would break the horizontal line spacing (for now).
 	private final int squareWidth=100;//Constant for now. This might be something that can be changed if the viewport size changes
 	
 	private int viewWidth;
 	private int viewHeight;
 	private ArrayList<ArrayList<LevelGridSquare>> gridSquares;
+	private Drawable playerDrawable;
 	
-	public LevelGrid(int viewWidth,int viewHeight){
+	public LevelGrid(int viewWidth, int viewHeight){
 		this.viewWidth=viewWidth;
 		this.viewHeight=viewHeight;
+		playerDrawable=null;
 		resetGrid();
 	}
 	public void resetGrid(){
@@ -158,5 +163,53 @@ public class LevelGrid {
 	}
 	public LevelGridSquare getGridSquare(int x, int y){
 		return gridSquares.get(x).get(y);
+	}
+	public void setPlayerDrawable(Drawable player){
+		playerDrawable=player;
+	}
+	@Override
+	public void draw(Graphics g) {
+		int height=getGridHeight();
+		int halfHeight=height/2;
+		int width=getGridWidth();
+		int halfWidth=width/2;
+		for(int y=0;y<height;y++){
+			for(int x=0;x<halfWidth;x++){
+				getGridSquare(x, y).draw(g);
+				getGridSquare(width-x-1, y).draw(g);
+			}
+			getGridSquare(halfWidth,y).draw(g);
+			if(y==halfHeight){
+				playerDrawable.draw(g);
+			}
+		}
+	}
+	@Override
+	public void setWidth(int w) {
+	}
+	@Override
+	public void setHeight(int h) {
+	}
+	@Override
+	public int getWidth() {
+		return 0;
+	}
+	@Override
+	public int getHeight() {
+		return 0;
+	}
+	@Override
+	public void setX(int x) {
+	}
+	@Override
+	public void setY(int y) {
+	}
+	@Override
+	public int getX() {
+		return 0;
+	}
+	@Override
+	public int getY() {
+		return 0;
 	}
 }
