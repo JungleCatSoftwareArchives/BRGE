@@ -19,13 +19,15 @@
 
 package com.junglecatsoftware.brge.levelgrid;
 
+import java.awt.Graphics;
 import java.awt.Polygon;
 import java.util.ArrayList;
 
+import com.junglecatsoftware.brge.graphics.drawables.Drawable;
 import com.junglecatsoftware.brge.graphics.drawables.LevelGridDrawable;
 
 
-public class LevelGridSquare implements Comparable<LevelGridSquare>{
+public class LevelGridSquare implements Comparable<LevelGridSquare>, Drawable{
 	private LevelGridPoint topLeft;
 	private LevelGridPoint topRight;
 	private LevelGridPoint bottomLeft;
@@ -138,5 +140,48 @@ public class LevelGridSquare implements Comparable<LevelGridSquare>{
 	}
 	public String toString(){
 		return "("+this.topLeft+","+this.topRight+","+this.bottomLeft+","+this.bottomRight+")";
+	}
+
+	@Override
+	public void draw(Graphics g) {
+		for(Drawable d : objects){
+			d.draw(g);
+		}
+	}
+
+	@Override
+	public void setWidth(int w) {
+	}
+
+	@Override
+	public void setHeight(int h) {
+	}
+
+	@Override
+	public int getWidth() {
+		return 0;
+	}
+
+	@Override
+	public int getHeight() {
+		return 0;
+	}
+
+	@Override
+	public void setX(int x) {
+	}
+
+	@Override
+	public void setY(int y) {
+	}
+
+	@Override
+	public int getX() {
+		return 0;
+	}
+
+	@Override
+	public int getY() {
+		return 0;
 	}
 }
