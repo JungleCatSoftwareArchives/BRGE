@@ -186,17 +186,19 @@ public class LevelGrid implements Drawable{
 	}
 	@Override
 	public void setWidth(int w) {
+		setViewWidth(w);
 	}
 	@Override
 	public void setHeight(int h) {
+		setViewHeight(h);
 	}
 	@Override
 	public int getWidth() {
-		return 0;
+		return getViewWidth();
 	}
 	@Override
 	public int getHeight() {
-		return 0;
+		return getViewHeight();
 	}
 	@Override
 	public void setX(int x) {
