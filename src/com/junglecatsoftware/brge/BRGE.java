@@ -28,6 +28,7 @@ public class BRGE { //Main class
 	private static GameWindow gw;
 	private static ScreenObjects screenObjects;
 	private static Game theGame;
+	private static boolean drawShadows=true;
 	
 	public static void start(Game game){
 		if(theGame==null){ //only start once
@@ -51,6 +52,12 @@ public class BRGE { //Main class
 	}
 	public static void toggleFPS(){
 		gw.toggleFPS();
+	}
+	public static void toggleShadows(){
+		drawShadows=!drawShadows;
+	}
+	public static boolean getDrawShadows(){
+		return drawShadows;
 	}
 	public static void keyPressed(int key){
 		theGame.keyPressed(key);
