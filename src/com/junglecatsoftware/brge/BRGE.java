@@ -28,7 +28,7 @@ public class BRGE { //Main class
 	private static GameWindow gw;
 	private static ScreenObjects screenObjects;
 	private static Game theGame;
-	private static boolean drawShadows;
+	private static boolean drawShadows=true;
 	
 	public static void start(Game game){
 		if(theGame==null){ //only start once
