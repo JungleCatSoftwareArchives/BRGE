@@ -27,7 +27,7 @@ import com.junglecatsoftware.brge.graphics.drawables.Drawable;
 import com.junglecatsoftware.brge.graphics.drawables.LevelGridDrawable;
 
 
-public class LevelGridSquare implements Comparable<LevelGridSquare>, Drawable{
+public class LevelGridSquare implements Comparable<LevelGridSquare>{
 	private LevelGridPoint topLeft;
 	private LevelGridPoint topRight;
 	private LevelGridPoint bottomLeft;
@@ -37,15 +37,19 @@ public class LevelGridSquare implements Comparable<LevelGridSquare>, Drawable{
 	private LevelGridSquare below;
 	private LevelGridSquare left;
 	private LevelGridSquare right;
-	
-	private ArrayList<LevelGridDrawable> objects;
+
+	private ArrayList<LevelGridDrawable> ground;
+	private ArrayList<LevelGridDrawable> middle;
+	private ArrayList<LevelGridDrawable> sky;
 	
 	public LevelGridSquare(LevelGridPoint topLeft,LevelGridPoint topRight,LevelGridPoint bottomLeft,LevelGridPoint bottomRight){
 		this.setTopLeft(topLeft);
 		this.setTopRight(topRight);
 		this.setBottomLeft(bottomLeft);
 		this.setBottomRight(bottomRight);
-		objects=new ArrayList<LevelGridDrawable>();
+		ground=new ArrayList<LevelGridDrawable>();
+		middle=new ArrayList<LevelGridDrawable>();
+		sky=new ArrayList<LevelGridDrawable>();
 	}
 
 	public LevelGridPoint getTopLeft() {
@@ -119,9 +123,34 @@ public class LevelGridSquare implements Comparable<LevelGridSquare>, Drawable{
 	public void setRight(LevelGridSquare right) {
 		this.right = right;
 	}
-	
-	public ArrayList<LevelGridDrawable> getObjects(){
-		return objects;
+	public ArrayList<LevelGridDrawable> getGroundObjects(){
+		return ground;
+	}
+	public ArrayList<LevelGridDrawable> getMiddleObjects(){
+		return middle;
+	}
+	public ArrayList<LevelGridDrawable> getSkyObjects(){
+		return sky;
+	}
+	public ArrayList<LevelGridDrawable> getAllObjects(){
+		ArrayList<LevelGridDrawable> allObjects=new ArrayList<LevelGridDrawable>(getGroundObjects());
+		allObjects.addAll(getMiddleObjects());
+		allObjects.addAll(getSkyObjects());
+		return allObjects;
+	}
+	public void clearGroundObjects(){
+		ground.clear();
+	}
+	public void clearMiddleObjects(){
+		middle.clear();
+	}
+	public void clearSkyObjects(){
+		sky.clear();
+	}
+	public void clearAllObjects(){
+		clearGroundObjects();
+		clearMiddleObjects();
+		clearSkyObjects();
 	}
 	public LevelGridSquare copy(){
 		return new LevelGridSquare(this.topLeft.copy(),this.topRight.copy(),this.bottomLeft.copy(),this.bottomRight.copy());
@@ -141,47 +170,20 @@ public class LevelGridSquare implements Comparable<LevelGridSquare>, Drawable{
 	public String toString(){
 		return "("+this.topLeft+","+this.topRight+","+this.bottomLeft+","+this.bottomRight+")";
 	}
-
-	@Override
-	public void draw(Graphics g) {
-		for(Drawable d : objects){
+	
+	public void drawGround(Graphics g) {
+		for(Drawable d : ground){
 			d.draw(g);
 		}
 	}
-
-	@Override
-	public void setWidth(int w) {
+	public void drawMiddle(Graphics g) {
+		for(Drawable d : middle){
+			d.draw(g);
+		}
 	}
-
-	@Override
-	public void setHeight(int h) {
-	}
-
-	@Override
-	public int getWidth() {
-		return 0;
-	}
-
-	@Override
-	public int getHeight() {
-		return 0;
-	}
-
-	@Override
-	public void setX(int x) {
-	}
-
-	@Override
-	public void setY(int y) {
-	}
-
-	@Override
-	public int getX() {
-		return 0;
-	}
-
-	@Override
-	public int getY() {
-		return 0;
+	public void drawSky(Graphics g) {
+		for(Drawable d : sky){
+			d.draw(g);
+		}
 	}
 }
