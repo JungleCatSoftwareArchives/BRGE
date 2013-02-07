@@ -173,14 +173,27 @@ public class LevelGrid implements Drawable{
 		int halfHeight=height/2;
 		int width=getGridWidth();
 		int halfWidth=width/2;
+		
+		for(int x=0;x<width;x++){
+			for(int y=0;y<height;y++){
+				getGridSquare(x, y).drawGround(g);
+			}
+		}
+		
 		for(int y=0;y<height;y++){
 			for(int x=0;x<halfWidth;x++){
-				getGridSquare(x, y).draw(g);
-				getGridSquare(width-x-1, y).draw(g);
+				getGridSquare(x, y).drawMiddle(g);
+				getGridSquare(width-x-1, y).drawMiddle(g);
 			}
-			getGridSquare(halfWidth,y).draw(g);
+			getGridSquare(halfWidth,y).drawMiddle(g);
 			if(y==halfHeight){
 				playerDrawable.draw(g);
+			}
+		}
+		
+		for(int x=0;x<width;x++){
+			for(int y=0;y<height;y++){
+				getGridSquare(x, y).drawSky(g);
 			}
 		}
 	}
