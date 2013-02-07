@@ -103,4 +103,7 @@ public class MenuItem implements Drawable{
 	public void setSelected(boolean selected){
 		state=selected;
 	}
+	public void setText(String s){
+		text=s;
+	}
 }
