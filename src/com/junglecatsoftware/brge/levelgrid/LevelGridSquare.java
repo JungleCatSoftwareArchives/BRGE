@@ -123,12 +123,35 @@ public class LevelGridSquare implements Comparable<LevelGridSquare>{
 	public void setRight(LevelGridSquare right) {
 		this.right = right;
 	}
-	
-	public ArrayList<LevelGridDrawable> getObjects(){
-		ArrayList<LevelGridDrawable> objects=new ArrayList<LevelGridDrawable>(ground);
-		objects.addAll(middle);
-		objects.addAll(sky);
-		return objects;
+	public ArrayList<LevelGridDrawable> getGroundObjects(){
+		return ground;
+	}
+	public ArrayList<LevelGridDrawable> getMiddleObjects(){
+		return middle;
+	}
+	public ArrayList<LevelGridDrawable> getSkyObjects(){
+		return sky;
+	}
+	public ArrayList<ArrayList<LevelGridDrawable>> getAllObjects(){
+		ArrayList<ArrayList<LevelGridDrawable>> allObjects=new ArrayList<ArrayList<LevelGridDrawable>>();
+		allObjects.add(getGroundObjects());
+		allObjects.add(getMiddleObjects());
+		allObjects.add(getSkyObjects());
+		return allObjects;
+	}
+	public void clearGroundObjects(){
+		ground.clear();
+	}
+	public void clearMiddleObjects(){
+		middle.clear();
+	}
+	public void clearSkyObjects(){
+		sky.clear();
+	}
+	public void clearAllObjects(){
+		clearGroundObjects();
+		clearMiddleObjects();
+		clearSkyObjects();
 	}
 	public LevelGridSquare copy(){
 		return new LevelGridSquare(this.topLeft.copy(),this.topRight.copy(),this.bottomLeft.copy(),this.bottomRight.copy());
